@@ -206,7 +206,7 @@ btk_Status btk_SDK_close( btk_HSDK hsdkA )
 btk_Error btk_SDK_getError( btk_HSDK hsdkA, char* msgBufA, u32 msgBufSizeA )
 {
 	if( hsdkA == NULL )					return btk_ERR_CORRUPT_DATA;
-	if( hsdkA->hidE != btk_HID_SDK )	return btk_STATUS_INVALID_HANDLE;
+	if( hsdkA->hidE != btk_HID_SDK )	return btk_ERR_CORRUPT_DATA;
 
 	if( bbs_Context_error( &hsdkA->contextE ) )
 	{
