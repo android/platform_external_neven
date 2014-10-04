@@ -293,7 +293,7 @@ int register_android_media_FaceDetector(JNIEnv *_env)
 
 // ---------------------------------------------------------------------------
 
-jint JNI_OnLoad(JavaVM* vm, void* reserved)
+jint JNI_OnLoad(JavaVM* vm, void*)
 {
     JNIEnv* env = NULL;
     jint result = -1;
