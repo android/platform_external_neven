@@ -105,6 +105,8 @@ LOCAL_SRC_FILES:= \
 
 LOCAL_CFLAGS += -Depl_LINUX
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 LOCAL_C_INCLUDES += \
 	external/neven/FaceRecEm/common/src/b_FDSDK \
 	$(JNI_H_INCLUDE) \
