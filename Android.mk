@@ -115,10 +115,8 @@ LOCAL_C_INCLUDES += \
 
 LOCAL_SHARED_LIBRARIES := \
 	libnativehelper \
-	libutils \
 	liblog \
 	libjnigraphics \
-	libcutils
 
 LOCAL_MODULE:= libFFTEm
 
@@ -130,5 +128,6 @@ ALL_PREBUILT += $(TARGET_OUT)/usr/share/bmd/RFFstd_501.bmd
 $(TARGET_OUT)/usr/share/bmd/RFFstd_501.bmd : $(LOCAL_PATH)/Embedded/common/data/APIEm/Modules/RFFstd_501.bmd | $(ACP)
 	$(transform-prebuilt-to-target)
 
+LOCAL_SDK_VERSION := 23
 
 include $(BUILD_SHARED_LIBRARY)
