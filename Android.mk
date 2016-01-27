@@ -113,12 +113,11 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/Embedded/common/src \
 	$(LOCAL_PATH)/unix/src
 
-LOCAL_SHARED_LIBRARIES := \
-	libnativehelper \
-	libutils \
-	liblog \
-	libjnigraphics \
-	libcutils
+LOCAL_SDK_VERSION := 23
+LOCAL_LDLIBS := \
+	-lnativehelper \
+	-llog \
+	-ljnigraphics \
 
 LOCAL_MODULE:= libFFTEm
 
@@ -129,6 +128,5 @@ $(TARGET_OUT)/usr/share/bmd/RFFspeed_501.bmd : $(LOCAL_PATH)/Embedded/common/dat
 ALL_PREBUILT += $(TARGET_OUT)/usr/share/bmd/RFFstd_501.bmd
 $(TARGET_OUT)/usr/share/bmd/RFFstd_501.bmd : $(LOCAL_PATH)/Embedded/common/data/APIEm/Modules/RFFstd_501.bmd | $(ACP)
 	$(transform-prebuilt-to-target)
-
 
 include $(BUILD_SHARED_LIBRARY)

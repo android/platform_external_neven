@@ -20,16 +20,16 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include <utils/misc.h>
-#include <utils/String8.h>
-#include <utils/Log.h>
-
 #include <android/bitmap.h>
+#include <android/log.h>
 
 #include "jni.h"
 #include "JNIHelp.h"
 
-using namespace android;
+#define LOG_TAG "FaceDetector_jni"
+
+#define ALOGE(...) \
+    __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__);
 
 extern "C"
 {
@@ -119,13 +119,13 @@ initialize(JNIEnv *_env, jobject _this,
 {
     // load the configuration file
     const char* root = getenv("ANDROID_ROOT");
-    String8 path(root);
-    path.appendPath("usr/share/bmd/RFFstd_501.bmd");
-    // path.appendPath("usr/share/bmd/RFFspeed_501.bmd");
+    char path[PATH_MAX];
+    snprintf(path, sizeof(path), "%s%s", root, "usr/share/bmd/RFFstd_501.bmd");
+    //snprintf(buf, "%s%s", root, "usr/share/bmd/RFFspeed_501.bmd");
 
     const int MAX_FILE_SIZE = 65536;
     void* initData = malloc( MAX_FILE_SIZE ); /* enough to fit entire file */
-    int filedesc = open(path.string(), O_RDONLY);
+    int filedesc = open(path, O_RDONLY);
     int initDataSize = read(filedesc, initData, MAX_FILE_SIZE);
     close(filedesc);
 
