@@ -43,10 +43,10 @@ extern const uint16 bbf_bit8TblG[ 256 ];
 #define bbf_BIT_SUM_8( vA ) ( bbf_bit8TblG[ vA ] )
 
 /** sums up bits in 16 bit variable */
-#define bbf_BIT_SUM_16( vA ) ( bbf_bit8TblG[ vA & 0x00FF ] + bbf_bit8TblG[ ( vA >> 8 ) & 0x00FF ] )
+#define bbf_BIT_SUM_16( vA ) ( bbf_bit8TblG[ (vA) & 0x00FF ] + bbf_bit8TblG[ ( (vA) >> 8 ) & 0x00FF ] )
 
 /** sums up bits in 16 bit variable */
-#define bbf_BIT_SUM_32( vA ) ( bbf_bit8TblG[ vA & 0x00FF ] + bbf_bit8TblG[ ( vA >> 8 ) & 0x00FF ]  + bbf_bit8TblG[ ( vA >> 16 ) & 0x00FF ] + bbf_bit8TblG[ ( vA >> 24 ) & 0x00FF ] )
+#define bbf_BIT_SUM_32( vA ) ( bbf_bit8TblG[ (vA) & 0x00FF ] + bbf_bit8TblG[ ( (vA) >> 8 ) & 0x00FF ]  + bbf_bit8TblG[ ( (vA) >> 16 ) & 0x00FF ] + bbf_bit8TblG[ ( (vA) >> 24 ) & 0x00FF ] )
 
 
 #endif /* bbf_FUNCTIONS_EM_H */
