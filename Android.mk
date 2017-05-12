@@ -108,6 +108,9 @@ LOCAL_SRC_FILES:= \
 
 LOCAL_CFLAGS += -Depl_LINUX -Wno-unused-parameter
 
+# Temporary workaround LLVM loop vectorizer crash
+LOCAL_CLANG_CFLAGS += -fno-vectorize
+
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/FaceRecEm/common/src/b_FDSDK \
 	$(JNI_H_INCLUDE) \
