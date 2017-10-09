@@ -46,6 +46,30 @@
       "revId": "7c09df6061f04accdcbb630d1dfbacb17beb10b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2c2d5b1_4a760a79",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2017-10-09T19:42:40Z",
+      "side": 1,
+      "message": "Then do you want to remove the TODO?",
+      "parentUuid": "3b96410a_da46c797",
+      "range": {
+        "startLine": 35,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 29
+      },
+      "revId": "7c09df6061f04accdcbb630d1dfbacb17beb10b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
