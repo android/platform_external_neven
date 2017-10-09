@@ -22,6 +22,30 @@
       "revId": "7c09df6061f04accdcbb630d1dfbacb17beb10b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3b96410a_da46c797",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-10-09T19:39:09Z",
+      "side": 1,
+      "message": "I think no, it\u0027s been there since pre-cupcake, so it is unlikely to be relevant, is only used by the api v1 face detection, builds fine without arm.",
+      "parentUuid": "3b8ecf3c_f3a6a986",
+      "range": {
+        "startLine": 35,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 29
+      },
+      "revId": "7c09df6061f04accdcbb630d1dfbacb17beb10b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
