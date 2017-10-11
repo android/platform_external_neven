@@ -106,7 +106,13 @@ LOCAL_SRC_FILES:= \
        FaceRecEm/common/src/b_FDSDK/SDK.c
 ##
 
-LOCAL_CFLAGS += -Depl_LINUX -Wno-unused-parameter
+LOCAL_CFLAGS := \
+    -Depl_LINUX \
+    -Wall -Werror \
+    -Wno-empty-body \
+    -Wno-enum-conversion \
+    -Wno-unused-parameter \
+    -Wno-unused-variable \
 
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/FaceRecEm/common/src/b_FDSDK \
