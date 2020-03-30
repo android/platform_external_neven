@@ -279,7 +279,7 @@ static JNINativeMethod methods[] = {
 
 int register_android_media_FaceDetector(JNIEnv *_env)
 {
-    return jniRegisterNativeMethods(_env, classPathName, methods, NELEM(methods));
+    return jniRegisterNativeMethods(_env, classPathName, methods);
 }
 
 // ---------------------------------------------------------------------------
